@@ -1,34 +1,38 @@
 #include <stdio.h>
 int main(){
-int choice,i,n;
+char choice;
+int i,n;
 double num,result;
-
 
 while(1){
 printf("\n");
 printf("******************************\n");
-printf("//Menu-driven CLI calculator//\n");
+printf("//Menu driven CLI calculator//\n");
 printf("******************************\n");
 printf("\n1.Addition\n");
 printf("2.Subtraction\n");
 printf("3.Multiplication\n");
 printf("4.Division\n");
-printf("5.To exit the program\n");
-printf("\nEnter the option: ");
-scanf("%d",&choice);
+printf("5.Exit the program\n");
+printf("\nEnter your option: ")
+;scanf(" %c", &choice);
 
-
-if(choice==5){
-printf("Exit the calculator thanks for using!\n");
+if (choice < '1' || choice > '5'){
+printf("Invalid option Please select between 1 and 5\n");
+continue;
+}
+if (choice == '5') {
+printf("Exiting the calculator thanks for using it\n");
 break;
 }
+
 switch(choice){
 
-case 1: 
+case '1': 
 printf("\nAddition\n");
 printf("--------");
 result=0;
-printf("\nEnter the total number you are going to add: ");
+printf("\nEnter the total number values you are going to add: ");
 scanf("%d",&n);
 printf("Enter %d number and pressing enter after each number: \n", n);
 
@@ -40,10 +44,10 @@ result += num;
 printf("\nSum = %lf\n",result);
 break;
 
-case 2: 
+case '2': 
 printf("\nSubtraction\n");
 printf("-----------");
-printf("\nEnter the total number you are going to substrate: ");
+printf("\nEnter the total number values you are going to substract: ");
 scanf("%d",&n);
 printf("Enter %d number and pressing enter after each number: \n", n);
 scanf("%lf",&result);
@@ -56,11 +60,11 @@ result -= num;
 printf("\nDifference = %lf\n",result);
 break;
 
-case 3:
+case '3':
 printf("\nMultiplication\n");
 printf("--------------");
 result=1;
-printf("\nEnter the total number you are going to multiple: ");
+printf("\nEnter the total number values you are going to multiply: ");
 scanf("%d",&n);
 printf("Enter %d number and pressing enter after each number: \n", n);
 for(i=0;i<n;i++){
@@ -72,10 +76,10 @@ printf("\nProduct: %lf\n",result);
 break;
 
 
-case 4:
+case '4':
 printf("\nDivision\n");
 printf("--------");
-printf("\nEnter the total number you are going to divide: ");
+printf("\nEnter the total number values you are going to divide: ");
 scanf("%d",&n);
 printf("Enter %d number and pressing enter after each number: \n", n);
 scanf("%lf",&result);
@@ -95,12 +99,8 @@ break;
 
 default:
 printf("Invalid option Please select between 1 and 5\n");
-
 }
 }
 
 return 0;
 }
-
-
-
