@@ -32,7 +32,7 @@ case '1':
 printf("\nAddition\n");
 printf("--------");
 result=0;
-printf("\nEnter the total number values you are going to add: ");
+printf("\nEnter the total number of values you are going to add: ");
 scanf("%d",&n);
 printf("Enter %d number and pressing enter after each number: \n", n);
 
@@ -47,7 +47,7 @@ break;
 case '2': 
 printf("\nSubtraction\n");
 printf("-----------");
-printf("\nEnter the total number values you are going to substract: ");
+printf("\nEnter the total number of values you are going to substract: ");
 scanf("%d",&n);
 printf("Enter %d number and pressing enter after each number: \n", n);
 scanf("%lf",&result);
@@ -64,7 +64,7 @@ case '3':
 printf("\nMultiplication\n");
 printf("--------------");
 result=1;
-printf("\nEnter the total number values you are going to multiply: ");
+printf("\nEnter the total number of values you are going to multiply: ");
 scanf("%d",&n);
 printf("Enter %d number and pressing enter after each number: \n", n);
 for(i=0;i<n;i++){
@@ -79,7 +79,7 @@ break;
 case '4':
 printf("\nDivision\n");
 printf("--------");
-printf("\nEnter the total number values you are going to divide: ");
+printf("\nEnter the total number of values you are going to divide: ");
 scanf("%d",&n);
 printf("Enter %d number and pressing enter after each number: \n", n);
 scanf("%lf",&result);
