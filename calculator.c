@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-char choice;
+char choice,next;
 int i,n;
 double num,result;
 
@@ -26,6 +26,7 @@ printf("Exiting the calculator thanks for using it\n");
 break;
 }
 
+while(1){
 switch(choice){
 
 case '1': 
@@ -100,7 +101,29 @@ break;
 default:
 printf("Invalid option Please select between 1 and 5\n");
 }
+
+printf("\nPress y to continue same operation\n");
+printf("Press c to change operation\n");
+printf("Press e to exit\n");
+scanf(" %c", &next);
+
+if(next=='y' || next=='Y'  ){
+  continue;
 }
+else if(next=='c' || next=='C'  ){
+break;
+}
+else if(next=='e' || next=='E'  ){
+printf("\nExiting the calculator thanks for using it\n");
+return 0;
+}
+else{
+  printf("Invalid choice. Returning to menu.\n");
+  break;
+}
+}
+}
+
 
 return 0;
 }
